@@ -10,6 +10,7 @@ var SongQueue = Songs.extend({
   playFirst: function() {
     this.first().play();  //passing a controller call through to a single song model.
   },
+  
   dequeueSong : function () {
     this.remove(this.first());  //a controller told me to delete the first song in my collection.
     this.trigger('songQueueRender', this);

@@ -5,7 +5,6 @@ var SongQueueEntryView = Backbone.View.extend({
 
   template: _.template('<td class="col-md-2">(<%= artist %>)</td><td class="col-md-2"><%= title %></td><td class="col-md-2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></td><td class="col-md-2"></td>'),
 
-  
   events: {
     'click span.glyphicon-minus': function() {
       this.model.dequeue();

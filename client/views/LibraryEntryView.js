@@ -8,12 +8,13 @@ var LibraryEntryView = Backbone.View.extend({
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></td>\
                         <td class="col-md-2"><%= playCount %></td>'),
 
-  //we need an even that is on XXXX, model.enqueue
   events: {
+
     'click span.glyphicon-plus': function() {
       //debugger;
       this.model.enqueue();
     },
+
     'click span.glyphicon-play'   : function() {
       //debugger;
       this.model.play();
@@ -23,5 +24,4 @@ var LibraryEntryView = Backbone.View.extend({
   render: function(){
     return this.$el.html(this.template(this.model.attributes));
   }
-
 });
